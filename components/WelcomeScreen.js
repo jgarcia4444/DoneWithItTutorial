@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image } from 'react-native';
+import {View, Text, StyleSheet, Image, ImageBackground, Button } from 'react-native';
 import bgImage from '../assets/background.jpg';
 import logo from '../assets/logo-red.png';
 
@@ -7,9 +7,12 @@ const WelcomeScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Image style={styles.bgImage} source={bgImage} />
-            <Image source={logo} style={styles.logo} />
-            <Text style={styles.logoText}>Sell What You Don't Need</Text>
+            <ImageBackground style={{width: '100%', height: '100%'}}source={bgImage} >
+                <Image source={logo} style={styles.logo} />
+                <Text style={styles.logoText}>Sell What You Don't Need</Text>
+                <Button title="hola" style={styles.topButton}/>
+                <Button title="tierra" style={styles.bottomButton}/>
+            </ImageBackground>
         </View>
     )
 }
@@ -19,26 +22,28 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    bgImage: {
-        width: '100%',
-        height: '100%',
-        flex: 1,
+        alignContent: 'center',
+        justifyContent: 'center'
     },
     logo: {
-        width: 150,
-        height: 150,
-        top: 75,
-        position: 'absolute'
+        width: 125,
+        height: 125,
+        alignSelf: 'center',
+        marginTop: 100
     },
     logoText: {
-        position: 'absolute',
-        top: 240,
         fontWeight: '700',
-        color: '#777'
-    }
+        color: '#777',
+        alignSelf: 'center',
+        marginTop: 10,
+        fontSize: 20
+    },
+    topButton: {
+
+    },
+    bottomButton: {
+
+    },
 })
 
 export default WelcomeScreen;
