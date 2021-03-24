@@ -9,13 +9,17 @@ export default function App() {
   const [pageRoute, setPageRoute] = useState('WELCOME')
 
   const goToImageView = () => {
-    setPageRoute('IMAGEVIEW')
+    setPageRoute('IMAGEVIEW');
+  }
+
+  const backToWelcomeScreen = () => {
+    setPageRoute('WELCOME');
   }
 
   return (
     <View style={styles.container}>
       {pageRoute === 'WELCOME' && <WelcomeScreen goToImageView={goToImageView} />}
-      {pageRoute === 'IMAGEVIEW' && <ImageView />}
+      {pageRoute === 'IMAGEVIEW' && <ImageView back={backToWelcomeScreen} />}
       <StatusBar style="auto" />
     </View>
   );
