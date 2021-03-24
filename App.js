@@ -1,12 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import WelcomeScreen from './components/WelcomeScreen';
+import ImageView from './components/ImageView';
 
 export default function App() {
+
+  const [pageRoute, setPageRoute] = useState('WELCOME')
+
+  const goToImageView = () => {
+    setPageRoute('IMAGEVIEW')
+  }
+
   return (
     <View style={styles.container}>
-      <WelcomeScreen />
+      {pageRoute === 'WELCOME' && <WelcomeScreen goToImageView={goToImageView} />}
+      {pageRoute === 'IMAGEVIEW' && <ImageView />}
       <StatusBar style="auto" />
     </View>
   );

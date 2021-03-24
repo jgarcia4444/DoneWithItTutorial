@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, Image, ImageBackground, Button } from 'react-nat
 import bgImage from '../assets/background.jpg';
 import logo from '../assets/logo-red.png';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({goToImageView}) => {
 
     return (
         <View style={styles.container}>
@@ -11,10 +11,10 @@ const WelcomeScreen = () => {
                 <Image source={logo} style={styles.logo} />
                 <Text style={styles.logoText}>Sell What You Don't Need</Text>
                 <View style={styles.topButton}>
-                    <Button title="" />
+                    <Button style={styles.navButton} title="go to image view" onPress={goToImageView} />
                 </View>
                 <View style={styles.bottomButton}>
-                    <Button title="" />
+                    <Button style={styles.navButton} title="" />
                 </View>
                 
             </ImageBackground>
@@ -57,6 +57,10 @@ const styles = StyleSheet.create({
         height: '8%',
         width: '100%',
         backgroundColor: 'cadetblue'
+    },
+    navButton: {
+        height: '100%',
+        width: '100%'
     },
 })
 
