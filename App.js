@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import WelcomeScreen from './app/components/WelcomeScreen';
 import ImageView from './app/components/ImageView';
+import LoginButton from './app/components/LoginButton';
 
 export default function App() {
 
@@ -18,8 +19,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {pageRoute === 'WELCOME' && <WelcomeScreen goToImageView={goToImageView} />}
-      {pageRoute === 'IMAGEVIEW' && <ImageView back={backToWelcomeScreen} />}
+      {/* {pageRoute === 'WELCOME' && <WelcomeScreen goToImageView={goToImageView} />}
+      {pageRoute === 'IMAGEVIEW' && <ImageView back={backToWelcomeScreen} />} */}
+      <LoginButton />
       <StatusBar style="auto" />
     </View>
   );
