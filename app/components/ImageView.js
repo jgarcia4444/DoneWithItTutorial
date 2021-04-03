@@ -2,6 +2,7 @@ import React from 'react';
 import {StatusBar, View, StyleSheet, Button, Image} from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import chairImg from '../assets/chair.jpg';
+import colors from '../config/colors';
 
 const ImageView = ({back}) => {
     return (
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     topLeftButton: {
         width: 50,
         height: 50,
-        backgroundColor: 'indianred',
+        backgroundColor: colors.primary,
         position: 'absolute',
         top: getStatusBarHeight(),
         left: 30
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     topRightButton: {
         width: 50,
         height: 50,
-        backgroundColor: 'cadetblue',
+        backgroundColor: colors.secondary,
         position: 'absolute',
         top: getStatusBarHeight(),
         right: 30

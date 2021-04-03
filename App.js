@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import WelcomeScreen from './components/WelcomeScreen';
-import ImageView from './components/ImageView';
+import WelcomeScreen from './app/components/WelcomeScreen';
+import ImageView from './app/components/ImageView';
 
 export default function App() {
 

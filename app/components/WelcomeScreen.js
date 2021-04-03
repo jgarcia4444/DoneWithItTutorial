@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Image, ImageBackground, Button } from 'react-native';
 import bgImage from '../assets/background.jpg';
 import logo from '../assets/logo-red.png';
+import colors from '../config/colors';
 
 const WelcomeScreen = ({goToImageView}) => {
 
@@ -49,14 +50,14 @@ const styles = StyleSheet.create({
         top: '84%',
         height: '8%',
         width: '100%',
-        backgroundColor: 'indianred'
+        backgroundColor: colors.primary
     },
     bottomButton: {
         position: 'absolute',
         top: '92%',
         height: '8%',
         width: '100%',
-        backgroundColor: 'cadetblue'
+        backgroundColor: colors.secondary
     },
     navButton: {
         height: '100%',
