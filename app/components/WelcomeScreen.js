@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Image, ImageBackground, Button } from 'react-nat
 import bgImage from '../assets/background.jpg';
 import logo from '../assets/logo-red.png';
 import colors from '../config/colors';
+import AuthButton from './AuthButton';
 
 const WelcomeScreen = ({goToImageView}) => {
 
@@ -11,11 +12,9 @@ const WelcomeScreen = ({goToImageView}) => {
             <ImageBackground style={{width: '100%', height: '100%'}}source={bgImage} >
                 <Image source={logo} style={styles.logo} />
                 <Text style={styles.logoText}>Sell What You Don't Need</Text>
-                <View style={styles.topButton}>
-                    <Button style={styles.navButton} title="go to image view" onPress={goToImageView} />
-                </View>
-                <View style={styles.bottomButton}>
-                    <Button style={styles.navButton} title="" />
+                <View style={styles.buttonParentContainer}>
+                    <AuthButton backgroundColor="primary" />
+                    <AuthButton backgroundColor="secondary" />
                 </View>
                 
             </ImageBackground>
@@ -24,6 +23,11 @@ const WelcomeScreen = ({goToImageView}) => {
 }
 
 const styles = StyleSheet.create({
+    buttonParentContainer: {
+        position: 'absolute',
+        bottom: 40,
+        width: '100%'
+    },
     container: {
         position: 'relative',
         width: '100%',
