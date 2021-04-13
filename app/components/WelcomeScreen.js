@@ -16,7 +16,6 @@ const WelcomeScreen = ({goToImageView}) => {
                     <AuthButton backgroundColor="primary" />
                     <AuthButton backgroundColor="secondary" />
                 </View>
-                
             </ImageBackground>
         </View>
     )
