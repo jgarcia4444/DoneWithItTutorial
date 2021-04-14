@@ -1,20 +1,55 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import Colors from '../config/colors';
 
-export default function ListingDetailsScreen({image, userImage, title, subtitle, userListingsAmount}) {
+export default function ListingDetailsScreen({image, listingUserInfo, title, subtitle}) {
     const styles = StyleSheet.create({
         mainContainerStyle: {
             flex: 1,
-            backgroundColor: '#000',
             width: '100%',
             alignItems: 'center',
             justifyContent: 'center'
+        },
+        itemImageStyle: {
+            position: 'absolute',
+            top: 0,
+            width: '100%',
+            height: '33%'
+        },
+        titleStyle: {
+            fontSize: 25
+        },
+        subtitleStyle: {
+            color: Colors.secondary,
+            fontSize: 20,
+            marginTop: 10,
+            fontWeight: '500'
+        },
+        listingUserContainerStyle: {
+
+        },
+        textViewContainer: {
+            position: 'absolute',
+            top: '33%',
+            width: '100%',
+            color: '#000',
+            paddingTop: 20,
+            paddingLeft: 20
         }
     })
 
+    const {listingUserImage, listingUserName, listingUserListings} = listingUserInfo
+
     return (
         <View style={styles.mainContainerStyle}>
-            <Text style={{color: '#fff', fontSize: 40}}>Hello World</Text>
+            <Image source={image} style={styles.itemImageStyle} />
+            <View style={styles.textViewContainer}>
+                <Text style={styles.titleStyle}>{title}</Text>
+                <Text style={styles.subtitleStyle}>{subtitle}</Text>
+            </View>
+            <View style={styles.listingUserContainerStyle}>
+
+            </View>
         </View>
     )
 

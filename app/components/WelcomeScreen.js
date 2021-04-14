@@ -4,9 +4,17 @@ import bgImage from '../assets/background.jpg';
 import logo from '../assets/logo-red.png';
 import colors from '../config/colors';
 import AuthButton from './AuthButton';
+import jacket from '../assets/jacket.jpg'
 import ListingDetailsScreen from './ListingDetailsScreen';
+import mosh from '../assets/mosh.jpg';
 
 const WelcomeScreen = ({goToImageView}) => {
+
+    const testListingUser = {
+        listingUserImage: mosh,
+        listingUserName: 'Mosh Hamedani',
+        listingUserListings: 5
+    }
 
     return (
         // <View style={styles.container}>
@@ -19,7 +27,7 @@ const WelcomeScreen = ({goToImageView}) => {
         //         </View>
         //     </ImageBackground>
         // </View>
-        <ListingDetailsScreen />
+        <ListingDetailsScreen listingUserInfo={testListingUser} image={jacket} title={"Red jacket for sale"} subtitle={'$100'}/>
     )
 }
 
