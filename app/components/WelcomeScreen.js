@@ -4,20 +4,22 @@ import bgImage from '../assets/background.jpg';
 import logo from '../assets/logo-red.png';
 import colors from '../config/colors';
 import AuthButton from './AuthButton';
+import ListingDetailsScreen from './ListingDetailsScreen';
 
 const WelcomeScreen = ({goToImageView}) => {
 
     return (
-        <View style={styles.container}>
-            <ImageBackground style={{width: '100%', height: '100%'}}source={bgImage} >
-                <Image source={logo} style={styles.logo} />
-                <Text style={styles.logoText}>Sell What You Don't Need</Text>
-                <View style={styles.buttonParentContainer}>
-                    <AuthButton backgroundColor="primary" />
-                    <AuthButton backgroundColor="secondary" />
-                </View>
-            </ImageBackground>
-        </View>
+        // <View style={styles.container}>
+        //     <ImageBackground style={{width: '100%', height: '100%'}}source={bgImage} >
+        //         <Image source={logo} style={styles.logo} />
+        //         <Text style={styles.logoText}>Sell What You Don't Need</Text>
+        //         <View style={styles.buttonParentContainer}>
+        //             <AuthButton backgroundColor="primary" />
+        //             <AuthButton backgroundColor="secondary" />
+        //         </View>
+        //     </ImageBackground>
+        // </View>
+        <ListingDetailsScreen />
     )
 }
 
