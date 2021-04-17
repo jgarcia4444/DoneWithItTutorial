@@ -8,11 +8,9 @@ export default function ListingDetailsScreen({image, listingUserInfo, title, sub
             flex: 1,
             width: '100%',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'flex-start'
         },
         itemImageStyle: {
-            position: 'absolute',
-            top: 0,
             width: '100%',
             height: '33%'
         },
@@ -25,17 +23,21 @@ export default function ListingDetailsScreen({image, listingUserInfo, title, sub
             marginTop: 10,
             fontWeight: '500'
         },
-        listingUserContainerStyle: {
-
-        },
         textViewContainer: {
-            position: 'absolute',
-            top: '33%',
             width: '100%',
             color: '#000',
             paddingTop: 20,
             paddingLeft: 20
-        }
+        },
+        listingUserContainerStyle: {
+            width: '90%'
+        },
+        userImageStyle: {
+            width: 50,
+            resizeMode: 'contain',
+            borderRadius: 50 / 2
+        },
+
     })
 
     const {listingUserImage, listingUserName, listingUserListings} = listingUserInfo
@@ -48,7 +50,7 @@ export default function ListingDetailsScreen({image, listingUserInfo, title, sub
                 <Text style={styles.subtitleStyle}>{subtitle}</Text>
             </View>
             <View style={styles.listingUserContainerStyle}>
-
+                <Image style={styles.userImageStyle} source={listingUserImage} />
             </View>
         </View>
     )
