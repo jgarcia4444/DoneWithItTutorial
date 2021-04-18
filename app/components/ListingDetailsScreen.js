@@ -30,12 +30,23 @@ export default function ListingDetailsScreen({image, listingUserInfo, title, sub
             paddingLeft: 20
         },
         listingUserContainerStyle: {
-            width: '90%'
+            marginTop: 50,
+            width: '90%',
+            flex: 0.5,
+            alignItems: 'flex-start',
+            justifyContent: 'flex-start',
+            flexDirection: 'row'
+        },
+        listingUserImageContainer: {
+            flex: 0.15
+        },
+        listingUserTextContainer: {
+            flex: 0.85
         },
         userImageStyle: {
             width: 50,
-            resizeMode: 'contain',
-            borderRadius: 50 / 2
+            height: 50,
+            borderRadius: 50 / 2,
         },
 
     })
@@ -50,7 +61,13 @@ export default function ListingDetailsScreen({image, listingUserInfo, title, sub
                 <Text style={styles.subtitleStyle}>{subtitle}</Text>
             </View>
             <View style={styles.listingUserContainerStyle}>
-                <Image style={styles.userImageStyle} source={listingUserImage} />
+                <View style={styles.listingUserImageContainer}>
+                    <Image style={styles.userImageStyle} source={listingUserImage} />
+                </View>
+                <View style={styles.listingUserTextContainer}>
+                    <Text style={{fontWeight: '700'}}>{listingUserName}</Text>
+                    <Text style={{color: '#777'}}>{listingUserListings} Listings</Text>
+                </View>
             </View>
         </View>
     )
