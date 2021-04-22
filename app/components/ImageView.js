@@ -1,20 +1,21 @@
 import React from 'react';
-import {StatusBar, View, StyleSheet, Button, Image} from 'react-native';
+import {StatusBar, View, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import chairImg from '../assets/chair.jpg';
 import colors from '../config/colors';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const ImageView = ({back}) => {
     return (
         <View style={styles.container}>
             <StatusBar barStyle={'light-content'} />
-            <View style={styles.topLeftButton}>
-                <Button title="" onPress={back} />
-            </View>
+            <TouchableOpacity style={styles.topLeftButton}>
+                <MaterialCommunityIcons name="close" size={40} color="white"/>
+            </TouchableOpacity>
             
-            <View style={styles.topRightButton}>
-                <Button title="" />
-            </View>
+            <TouchableOpacity style={styles.topRightButton}>
+                <MaterialCommunityIcons name="trash-can-outline" size={40} color="white" />
+            </TouchableOpacity>
             <Image source={chairImg} style={styles.chairImg} />
         </View>
     )
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     topLeftButton: {
         width: 50,
         height: 50,
-        backgroundColor: colors.primary,
+        // backgroundColor: colors.primary,
         position: 'absolute',
         top: getStatusBarHeight(),
         left: 30
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     topRightButton: {
         width: 50,
         height: 50,
-        backgroundColor: colors.secondary,
+        // backgroundColor: colors.secondary,
         position: 'absolute',
         top: getStatusBarHeight(),
         right: 30

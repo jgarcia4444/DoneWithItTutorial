@@ -7,6 +7,7 @@ import AuthButton from './AuthButton';
 import jacket from '../assets/jacket.jpg'
 import ListingDetailsScreen from './ListingDetailsScreen';
 import mosh from '../assets/mosh.jpg';
+import ImageView from './ImageView';
 
 const WelcomeScreen = ({goToImageView}) => {
 
@@ -17,6 +18,7 @@ const WelcomeScreen = ({goToImageView}) => {
     }
 
     return (
+        <ImageView />
         // <View style={styles.container}>
         //     <ImageBackground style={{width: '100%', height: '100%'}}source={bgImage} >
         //         <Image source={logo} style={styles.logo} />
@@ -27,7 +29,7 @@ const WelcomeScreen = ({goToImageView}) => {
         //         </View>
         //     </ImageBackground>
         // </View>
-        <ListingDetailsScreen listingUserInfo={testListingUser} image={jacket} title={"Red jacket for sale"} subtitle={'$100'}/>
+        // <ListingDetailsScreen listingUserInfo={testListingUser} image={jacket} title={"Red jacket for sale"} subtitle={'$100'}/>
     )
 }
 
