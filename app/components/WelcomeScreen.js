@@ -8,6 +8,7 @@ import jacket from '../assets/jacket.jpg'
 import ListingDetailsScreen from './ListingDetailsScreen';
 import mosh from '../assets/mosh.jpg';
 import ImageView from './ImageView';
+import MyAccountScreen from '../screens/MyAccountScreen';
 
 const WelcomeScreen = ({goToImageView}) => {
 
@@ -18,7 +19,7 @@ const WelcomeScreen = ({goToImageView}) => {
     }
 
     return (
-        <ImageView />
+        <MyAccountScreen />
         // <View style={styles.container}>
         //     <ImageBackground style={{width: '100%', height: '100%'}}source={bgImage} >
         //         <Image source={logo} style={styles.logo} />
