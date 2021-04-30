@@ -1,7 +1,10 @@
 const Colors = {
+    darkGray: '#555',
+    gray: '#dddddd',
     primary: 'indianred',
     secondary: 'cadetblue',
-    whiteSmoke: '#f7f4f4'
+    white: '#ffffff',
+    
 }
 
 export default Colors;
