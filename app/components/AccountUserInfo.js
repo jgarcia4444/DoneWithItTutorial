@@ -10,35 +10,6 @@ export default function AccountUserInfo() {
         userEmail: 'programmingwithmosh@gmail.com'
     }
 
-    const styles = StyleSheet.create({
-        avatarStyle: {
-            height: 60,
-            width: 60,
-            borderRadius: 30
-        },
-        containerStyle: {
-            backgroundColor: Colors.white,
-            width: '100%',
-            flexDirection: 'row',
-            padding: 15,
-            marginTop: 20,
-        },
-        emailStyle: {
-            color: Colors.darkGray,
-        },
-        nameStyle: {
-            fontWeight: '900',
-            paddingBottom: 5
-        },
-        userInfoContainer: {
-            flexDirection: 'column',
-            flex: 1,
-            alignItems: 'flex-start',
-            justifyContent: 'center',
-            marginLeft: 15,
-        }
-    })
-
     return (
         <View style={styles.containerStyle}>
             <Image source={mockUser.userAvatar} style={styles.avatarStyle} />
@@ -49,3 +20,32 @@ export default function AccountUserInfo() {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    avatarStyle: {
+        height: 60,
+        width: 60,
+        borderRadius: 30
+    },
+    containerStyle: {
+        backgroundColor: Colors.white,
+        width: '100%',
+        flexDirection: 'row',
+        padding: 15,
+        marginTop: 20,
+    },
+    emailStyle: {
+        color: Colors.darkGray,
+    },
+    nameStyle: {
+        fontWeight: '900',
+        paddingBottom: 5
+    },
+    userInfoContainer: {
+        flexDirection: 'column',
+        flex: 1,
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        marginLeft: 15,
+    }
+})

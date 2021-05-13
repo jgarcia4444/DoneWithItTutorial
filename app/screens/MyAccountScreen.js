@@ -1,8 +1,9 @@
 
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import {View, SafeAreaView, StyleSheet } from 'react-native';
 import Colors from '../config/colors';
 import AccountUserInfo from '../components/AccountUserInfo';
+import AccountOption from '../components/AccountOption';
 
 export default function MyAccountScreen() {
 
@@ -12,13 +13,19 @@ export default function MyAccountScreen() {
             backgroundColor: Colors.gray,
             flex: 1,
             width: '100%',
-            
         }
     })
 
     return (
         <SafeAreaView style={styles.containerStyle}>
             <AccountUserInfo />
+            <View>
+                <AccountOption title={"My Listings"} />
+                <AccountOption title={"My Messages"} />
+            </View>
+            <View>
+                <AccountOption title={"Log Out"}/>
+            </View>
         </SafeAreaView>
     )
 
