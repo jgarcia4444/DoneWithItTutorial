@@ -33,18 +33,24 @@ export default function AccountOption({title}) {
     return(
         <View style={styles.containerStyle}>
             {getIcon()}
-            <Text>{title}</Text>
+            <Text style={styles.titleStyle}>{title}</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     containerStyle: {
+        backgroundColor: '#ffffff',
         width: '100%',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        padding: 10,
+        alignItems: 'center'
     },
     iconWrapper: {
         padding: 10,
         borderRadius: 25
+    },
+    titleStyle: {
+        marginLeft: 10
     }
 })
