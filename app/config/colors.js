@@ -4,7 +4,7 @@ const Colors = {
     primary: 'indianred',
     secondary: 'cadetblue',
     white: '#ffffff',
-    
+    logoutYellow: '#ffe66d'
 }
 
 export default Colors;
