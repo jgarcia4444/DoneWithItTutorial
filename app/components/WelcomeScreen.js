@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, ImageBackground, Button } from 'react-native';
+import {FlatList, View, Text, StyleSheet, Image, ImageBackground, Button, SafeAreaView } from 'react-native';
 import bgImage from '../assets/background.jpg';
 import logo from '../assets/logo-red.png';
 import colors from '../config/colors';
@@ -9,6 +9,7 @@ import ListingDetailsScreen from './ListingDetailsScreen';
 import mosh from '../assets/mosh.jpg';
 import ImageView from './ImageView';
 import MyAccountScreen from '../screens/MyAccountScreen';
+import CardComponent from '../components/CardComponent';
 
 const WelcomeScreen = ({goToImageView}) => {
 
@@ -17,9 +18,29 @@ const WelcomeScreen = ({goToImageView}) => {
         listingUserName: 'Mosh Hamedani',
         listingUserListings: 5
     }
+    const testListings = [
+        {
+            id: 1,
+            title: "Red Jacket",
+            subtitle: "$100",
+            image: jacket
+        },
+        {
+            id: 2,
+            title: "Red Jacket",
+            subtitle: "$100",
+            image: jacket
+        }
+    ]
 
     return (
-        <MyAccountScreen />
+        <SafeAreaView>
+            <FlatList 
+                keyExtractor={item => item.id}
+                data={testListings}>
+                renderItem={(listing) => <CardComponent listing={listing} />} ></FlatList>
+        </SafeAreaView>
+        // <MyAccountScreen />
         // <View style={styles.container}>
         //     <ImageBackground style={{width: '100%', height: '100%'}}source={bgImage} >
         //         <Image source={logo} style={styles.logo} />

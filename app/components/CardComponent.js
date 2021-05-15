@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View, StyleSheet, Image} from 'react-native';
 import Colors from '../config/colors';
 
-export default function CardComponent({title, subtitle, image}) {
+export default function CardComponent({listing}) {
 
     const styles = StyleSheet.create({
         cardContainer: {
@@ -30,6 +30,7 @@ export default function CardComponent({title, subtitle, image}) {
             fontWeight: '700',
         }
     })
+    const {title, subtitle, image} = listing
     return (
         <View style={styles.cardContainer}>
             <Image source={image} style={styles.imageStyle} />
