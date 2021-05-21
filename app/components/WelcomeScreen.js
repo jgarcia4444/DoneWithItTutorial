@@ -10,6 +10,7 @@ import mosh from '../assets/mosh.jpg';
 import ImageView from './ImageView';
 import MyAccountScreen from '../screens/MyAccountScreen';
 import CardComponent from '../components/CardComponent';
+import Colors from '../config/colors';
 
 const WelcomeScreen = ({goToImageView}) => {
 
@@ -20,26 +21,28 @@ const WelcomeScreen = ({goToImageView}) => {
     }
     const testListings = [
         {
-            id: 1,
+            id: '1',
             title: "Red Jacket",
             subtitle: "$100",
             image: jacket
         },
         {
-            id: 2,
+            id: '2',
             title: "Red Jacket",
             subtitle: "$100",
             image: jacket
         }
     ]
+    const renderItem = ({item}) => (
+        <CardComponent listing={item}/>
+    );
 
     return (
-        <SafeAreaView>
-            <FlatList 
+            <FlatList style={styles.listStyle}
+                data={testListings}
+                renderItem={renderItem} 
                 keyExtractor={item => item.id}
-                data={testListings}>
-                renderItem={(listing) => <CardComponent listing={listing} />} ></FlatList>
-        </SafeAreaView>
+            />
         // <MyAccountScreen />
         // <View style={styles.container}>
         //     <ImageBackground style={{width: '100%', height: '100%'}}source={bgImage} >
@@ -81,6 +84,10 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         marginTop: 10,
         fontSize: 20
+    },
+    listStyle: {
+        backgroundColor: Colors.gray,
+        width: '100%',
     },
     topButton: {
         position: 'absolute',
